@@ -33,7 +33,8 @@ showrolls.addEventListener("click", function () {
   let loopnum = 0;
   while (loopnum < dicerolled.length) {
     showrolls.innerHTML =
-      +"<ol><li>" + dicerolled.join("</li><li>") + "</li></ol>";
+      "<ol><li>" + dicerolled.join("</li><li>") + "</li></ol>";
+    console.log(showrolls.innerHTML);
     loopnum++;
   }
 });
@@ -42,5 +43,9 @@ showrolls.addEventListener("click", function () {
 // });
 
 resetButton.addEventListener("click", function () {
+  let usersChoice = Number(usersChoiceinput.value);
+
   dicerolled = [];
+  showrolls.innerHTML = "Show All Rolls";
+  totalscore.innerHTML = "Total";
 });
